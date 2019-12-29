@@ -17,19 +17,19 @@ void print_vector(vector<int> v)
 //Average O(n^2) time, O(1) space
 vector<int> bubbleSort(vector<int> array)
 {
-	while (true)
+    while (true)
     {
-		int swapped = 0;
-		for (int i = 0 ; i < array.size()-1 ; i++)
+        int swapped = 0;
+        for (int i = 0 ; i < array.size()-1 ; i++)
         {
-			if (array[i] > array[i+1])
+            if (array[i] > array[i+1])
             {
                 swap(&array[i], &array[i+1]);
-				swapped += 1;
-			}
-		}
-		if (swapped == 0) return array;
-	}
+                swapped += 1;
+            }
+        }
+        if (swapped == 0) return array;
+    }
 }
 
 int main()

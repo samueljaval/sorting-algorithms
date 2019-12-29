@@ -18,25 +18,25 @@ void swap(int* i, int* j)
 // Average O(n^2) time, O(1) space
 vector<int> insertionSort(vector<int> array)
 {
-	for (int i = 0 ; i < array.size()-1; i++)
+    for (int i = 0 ; i < array.size()-1; i++)
     {
-		if (array[i+1] < array[i])
+        if (array[i+1] < array[i])
         {
-			swap(&array[i], &array[i+1]);
-			for (int j = i; j > 0; j--)
+            swap(&array[i], &array[i+1]);
+            for (int j = i; j > 0; j--)
             {
-				if (array[j-1] > array[j]) swap(&array[j], &array[j-1]);
-			}
-		}
-	}
-	return array;
+                if (array[j-1] > array[j]) swap(&array[j], &array[j-1]);
+            }
+        }
+    }
+    return array;
 }
 
 int main()
 {
     // has to be run with C++11 or later version
-	 std::vector<int> v = {-4, 5,  10, 8,  -10, -6, -4, -2, -5, 3,
+    std::vector<int> v = {-4, 5,  10, 8,  -10, -6, -4, -2, -5, 3,
                             5,  -4, -5, -1, 1,   6,  -7, -6, -7, 8};
-	 vshow(insertionSort(v));
-	 return 0;
+    vshow(insertionSort(v));
+    return 0;
 }
